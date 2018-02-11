@@ -13,6 +13,7 @@ int ledPin = 13;
 int inputPin = 9;
 int pirState = LOW;
 int val = 0;
+int count;
 
 void setup() {
   // put your setup code here, to run once:
@@ -21,7 +22,7 @@ void setup() {
 
   
   lcd.begin(16, 2);
-  lcd.print("hello, world!");
+  lcd.print("You moved");
 
 }
 
@@ -32,12 +33,14 @@ void loop() {
   digitalWrite(ledPin, val);
   if (val == 1){
     digitalWrite(ledPin, LOW);
+  //    delay(250);
+    count++;
   }
 
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
   lcd.setCursor(0, 1);
   // print the number of seconds since reset:
-  lcd.print(millis() / 1000);
+  lcd.print(count/1678);
 
 }
