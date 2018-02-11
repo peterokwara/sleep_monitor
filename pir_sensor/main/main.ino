@@ -13,7 +13,6 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(ledPin, OUTPUT);
   pinMode(inputPin, INPUT);
-  Serial.begin(9600);
 
 }
 
