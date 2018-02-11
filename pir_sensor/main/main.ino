@@ -1,4 +1,7 @@
 
+// Connect the input pin from the motion sensor to 9
+// Connect the positive end of the led to pin 13
+
 int ledPin = 13;
 int inputPin = 9;
 int pirState = LOW;
